@@ -4,7 +4,14 @@
 
 [![image](images/adaptive-logo.svg)](http://weareadaptive.com/)
 
-# Reactive Trader®
+# Reactive Trader® (ARCHIVED)
+
+THIS REPO WILL NOT BE UPDATED IN FUTURE.
+
+However, it remains as a public example of a reactive UI of significant scale using React, Rxjs, and react-rxjs, with desktop variants for OpenFin and Finsemble, connecting to an Adaptive Hydra® / Aeron® backend.
+The showcase linked below will remain current, but the desktop variants will not be part of the suite in future.
+
+## Description
 
 Reactive Trader® is a real-time FX trading platform designed to showcase reactive programming principles across the full application stack.
 
@@ -20,51 +27,6 @@ Please see [our Showcase page](https://weareadaptive.com/showcase/) for a full l
 - [OpenFin([]](https://openfin.co/)) & [Finsemble](https://cosaic.io/finsemble/) installers [here](./packages/client/install/README.md)
 - [Style guide](https://www.reactivetrader.com/storybook): Colours, iconography, typography, atoms and molecules
 - [Storybook](https://www.reactivetrader.com/styleguide): Explore individual React components
-
-## Development
-
-To run the web UI
-
-1. Fork and clone the ReactiveTraderCloud repo ([see Contributing page](CONTRIBUTING.md))
-
-2. [See client README](packages/client/README.md)
-
-<details>
-<summary>Manually update contracts for Trading Gateway API</summary>
-
-1. Open [hydra-reactive-trader](`https://github.com/AdaptiveConsulting/hydra-reactive-trader`) project in IntelliJ IDEA and run:
-
-   ```sh
-   ./gradlew
-   ```
-
-2. Copy file `component/gateway/trading/api/build/generated-sources/codecs/main/resources/trading-gateway.hyer` to UI project `src/client/trading-gateway.hyer`
-
-3. Back in src/client, run:
-   ```sh
-   npm run generateCod
-   ```
-   This will regenerate TradingGateway.ts `(file://./src/client/src/generated/TradingGateway.ts)`
-   </details>
-
-<details>
-<summary>Run against local Backend Services</summary>
-
-1. Follow instructions to start [Backend Services](`https://github.com/AdaptiveConsulting/hydra-reactive-trader#building-the-project`)
-
-2. Run:
-   ```sh
-   VITE_HYDRA_URL=ws://localhost:8929 npm start
-   ```
-   </details>
-
-## CI/CD
-
-We practice continuous integration and deployment. Every branch and pull request triggers a build and deployment to an ephemeral environment. Merging to master causes a build and deployment to our [development environment](https://web.dev.reactivetrader.com).
-
-## Contributing
-
-Please see our [contribution guidelines](./CONTRIBUTING.md).
 
 ## Who are we?
 
